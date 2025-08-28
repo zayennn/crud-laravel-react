@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 800px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header .content__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+header .content__header input {
+    width: 50%;
+    padding: .5rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+header .content__header button {
+    padding: .7rem 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgreen;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* border-radius: 10px;
+    overflow: hidden; */
+
+}
+
+th, td {
+    padding: 1rem;
+}
+
+th {
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn__edit {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgreen;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn__delete {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: lightcoral;
+    color: #fff;
+    cursor: pointer;
+}
+
+.not__found {
+    text-align: center;
+}
