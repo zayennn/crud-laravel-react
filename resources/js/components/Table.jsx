@@ -4,13 +4,25 @@ import { useState, useEffect } from 'react'
 import Mahasiswa from "../datas/Mahasiswa"
 
 export default function Table() {
+
+    const [data, setData] = useState(Mahasiswa)
+    const [search, setSearch] = useState('')
+    const [filteredData, setFilteredData] = useState([])
+
+    useEffect(() => {
+        const filtered = data.filter(item => {
+            return item.nama.toLowerCase().includes(search.toLowerCase())
+        })
+        setFilteredData(filtered)
+    }, [search])
+
     return (
         <>
             <div className="container">
                 <header>
                     <h1>Data Mahasiswa</h1>
                     <div className="content__header">
-                        <input type="text" placeholder="Cari data mahasiswa" />
+                        <input type="text" placeholder="Cari data mahasiswa" value={search} onChange={(e) => setSearch(e.target.value)} />
                         <button>tambah data</button>
                     </div>
                 </header>
@@ -26,8 +38,8 @@ export default function Table() {
                         </tr>
                     </thead>
                     <tbody>
-                        {Mahasiswa.length > 0 ? (
-                            Mahasiswa.map((item, index) => {
+                        {filteredData.length > 0 ? (
+                            filteredData.map((item, index) => {
                                 return (
                                     <tr key={item.id}>
 
@@ -45,7 +57,7 @@ export default function Table() {
                             })
                         ) : (
                             <tr>
-                                <td className='not__found' colSpan="6">data tidak ditemukan</td>
+                                <td colSpan="6">data tidak ditemukan</td>
                             </tr>
                         )}
                     </tbody>
