@@ -38,18 +38,19 @@ header .content__header {
 
 header .content__header input {
     width: 50%;
-    padding: .5rem;
+    padding: .6rem;
     border-radius: 10px;
     border: 1px solid #ccc;
     outline: none;
 }
 
-header .content__header button {
-    padding: .7rem 1rem;
+header .content__header a {
+    padding: .6rem 1rem;
     border-radius: 10px;
     border: none;
     background-color: lightgreen;
     color: #fff;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -84,7 +85,7 @@ tbody tr:nth-child(even) {
     padding: .5rem 1rem;
     border-radius: 10px;
     border: none;
-    background-color: lightgreen;
+    background-color: skyblue;
     color: #fff;
     cursor: pointer;
 }
@@ -100,4 +101,5 @@ tbody tr:nth-child(even) {
 
 .not__found {
     text-align: center;
+    vertical-align: middle;
 }
